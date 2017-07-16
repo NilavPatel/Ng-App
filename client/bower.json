@@ -1,0 +1,21 @@
+{
+    "name": "ng-app",
+    "version": "0.0.1",
+    "homepage": "https://nilavpatel.visualstudio.com/_git/Ng-App",
+    "authors": [
+        "Nilav"
+    ],
+    "description": "Sample Application",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "angular": "^1.6.2",
+        "angular-messages": "^1.6.4",
+        "angular-ui-router": "^0.4.2",        
+        "oclazyload": "^1.1.0"
+    }
+}

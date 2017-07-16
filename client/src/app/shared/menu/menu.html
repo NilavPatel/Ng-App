@@ -1,0 +1,3 @@
+<div class="topnav" ng-app="app.menu" ng-controller="MenuController as menu">
+    <a ng-repeat="item in menu.menus" ng-click="menu.navigateToMenu(item.view)" ng-class="{'active':item.view === menu.current}">{{item.title}}</a>
+</div>

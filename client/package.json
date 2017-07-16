@@ -1,0 +1,24 @@
+{
+  "name": "ng-app",
+  "version": "0.0.1",
+  "description": "Sample Application",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://nilavpatel.visualstudio.com/_git/Ng-App"
+  },
+  "keywords": [
+    "Nilav"
+  ],
+  "author": "Nilav Patel",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-minify": "^1.0.0",
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "start": "http-server src"
+  }
+}
