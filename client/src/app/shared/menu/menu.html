@@ -1,3 +1,22 @@
-<div class="topnav" ng-app="app.menu" ng-controller="MenuController as menu">
-    <a ng-repeat="item in menu.menus" ng-click="menu.navigateToMenu(item.view)" ng-class="{'active':item.view === menu.current}">{{item.title}}</a>
+<div ng-app="app.menu" ng-controller="MenuController as menu">
+    <section layout="column">
+        <md-toolbar>
+            <div layout="column" layout-align="center center" layout-padding>
+                <img src="content/images/nilav-patel.jpg" class="user-image" />
+                <div layout="row">
+                    Nilav Patel
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <div layout-padding>
+                <div ng-repeat="item in menu.menus" layout="row" layout-align="start center">
+                    <div layout-padding>
+                        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+                    </div>
+                    <a ng-click="menu.navigateToMenu(item.view)" ng-class="{'active':item.view === menu.current}">{{item.title}}</a>
+                </div>
+            </div>
+        </md-content>
+    </section>
 </div>

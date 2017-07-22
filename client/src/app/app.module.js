@@ -8,6 +8,7 @@
             "ui.router",
             "ngMessages",
             "oc.lazyLoad",
+            "ngMaterial",
 
             // application modules
             "app.login",

@@ -5,9 +5,9 @@
         .module("app.menu")
         .controller("MenuController", MenuController);
 
-    MenuController.$inject = ["$state"];
+    MenuController.$inject = ["$state", "$mdSidenav"];
 
-    function MenuController($state) {
+    function MenuController($state, $mdSidenav) {
 
         var self = this;
         // variables
@@ -16,15 +16,18 @@
         self.menus = [{
             id: 'dashbaord',
             title: 'Home',
-            view: "home.dashboard"
+            view: "home.dashboard",
+            icon:"content/images/ic_home_black_36px.svg"
         }, {
             id: 'aboutus',
             title: 'About Us',
-            view: "home.aboutus"
+            view: "home.aboutus",
+            icon:"content/images/ic_call_black_36px.svg"
         }, {
             id: 'contactus',
             title: 'Contact Us',
-            view: "home.contactus"
+            view: "home.contactus",
+            icon:"content/images/ic_info_black_36px.svg"
         }];
 
         // functions

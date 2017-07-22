@@ -1,45 +1,70 @@
 html,body{
     width:100%;
 }
- .my-form {
+.my-form {
    transition:all linear 0.5s;
    background: transparent;
  }
- .error-message{
+.error-message{
      color:red;
  }
- .module-title{
+.module-title{
      color: brown;
      font-size: 30px;
  }
- /* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
- /* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    cursor: default;
-}
+    .progressCirculardemoBasicUsage body {
+  padding: 20px; }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-.topnav .active {
-    background-color: #ddd;
-    color: black;
-}
+.progressCirculardemoBasicUsage h4 {
+  margin: 10px 0; }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
+.progressCirculardemoBasicUsage md-progress-circular {
+  margin-bottom: 20px; }
+
+.progressCirculardemoBasicUsage #loaders > md-switch {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -10px; }
+
+.progressCirculardemoBasicUsage #loaders > h5 {
+  margin-top: 0; }
+
+.progressCirculardemoBasicUsage #loaders > p {
+  margin-right: 20px;
+  margin-bottom: 24px; }
+
+.progressCirculardemoBasicUsage p.small {
+  font-size: 0.8em;
+  margin-top: -18px; }
+
+.progressCirculardemoBasicUsage hr {
+  width: 100%;
+  margin-top: 20px;
+  border-color: rgba(221, 221, 177, 0.1); }
+
+.progressCirculardemoBasicUsage p.small > code {
+  font-size: 0.8em; }
+
+.progressCirculardemoBasicUsage .visible {
+  border-color: rgba(221, 221, 177, 0); }
+.loader-image{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+.loader-image:before {
+    background-color: rgba(49, 37, 37, 0.2);
+    border-radius: 6px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    content: " ";
+    z-index: 2000000000;
+}
+.user-image{
+  height:150px;
+  width:150px;
+  border-radius: 50%;
 }

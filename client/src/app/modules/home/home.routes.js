@@ -7,10 +7,11 @@
 
     function stateConfig($stateProvider, $urlRouterProvider) {
 
+        // dashboard state
         var dahsboard = {
             name: "home.dashboard",
             url: "/dashboard",
-            authenticate: true,
+            authenticate: false,
             active: "home.dashboard",
             views: {
                 'menu': {
@@ -20,6 +21,7 @@
                     templateUrl: 'app/modules/home/dashboard/dashboard.html'
                 }
             },
+            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
                 parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
                     return $ocLazyLoad.load({
@@ -33,10 +35,11 @@
             }
         }
 
+        // contact us state
         var contactus = {
             name: "home.contactus",
             url: "/contactus",
-            authenticate: true,
+            authenticate: false,
             active: "home.contactus",
             views: {
                 'menu': {
@@ -47,6 +50,7 @@
 
                 }
             },
+            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
                 parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
                     return $ocLazyLoad.load({
@@ -60,10 +64,11 @@
             }
         }
 
+        // about us state
         var aboutus = {
             name: "home.aboutus",
             url: "/aboutus",
-            authenticate: true,
+            authenticate: false,
             active: "home.aboutus",
             views: {
                 'menu': {
@@ -74,6 +79,7 @@
 
                 }
             },
+            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
                 parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
 
