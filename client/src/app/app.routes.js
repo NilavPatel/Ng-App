@@ -11,23 +11,30 @@
             name: "login",
             url: "/login",
             authenticate: false,
-            templateUrl: "app/modules/login/login.html"
+            views: {
+                "main": {
+                    controller: 'LoginController',
+                    templateUrl: 'app/modules/login/login.html'
+                }
+            }
         }
 
         var home = {
             name: "home",
             url: "/home",
             authenticate: true,
-            templateUrl: "app/modules/home/home.html",
+            views: {
+                "main": {
+                    controller: 'HomeController',
+                    templateUrl: 'app/modules/home/home.html'
+                }
+            },
             resolve: {
-                parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: 'app.menu',
-                        files: [
-                            'app/shared/menu/menu.module.js',
-                            'app/shared/menu/menu.controller.js'
-                        ]
-                    });
+                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/shared/menu/menu.module.js',
+                        'app/shared/menu/menu.controller.js'
+                    ]);
                 }]
             }
         }
@@ -36,7 +43,11 @@
             name: "error404",
             url: "/404",
             authenticate: false,
-            templateUrl: "app/shared/error/404.html"
+            views: {
+                "main": {
+                    templateUrl: 'app/shared/error/404.html'
+                }
+            },
         }
 
         $stateProvider

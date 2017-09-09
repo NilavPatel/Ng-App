@@ -23,14 +23,12 @@
             },
             resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: 'app.home.dashboard',
-                        files: [
-                            'app/modules/home/dashboard/dashboard.module.js',
-                            'app/modules/home/dashboard/dashboard.controller.js'
-                        ]
-                    });
+                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/modules/home/dashboard/dashboard.module.js',
+                        'app/modules/home/dashboard/dashboard.controller.js'
+                    ]
+                    );
                 }]
             }
         }
@@ -52,14 +50,12 @@
             },
             resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: 'app.home.contactus',
-                        files: [
-                            'app/modules/home/contact-us/contact-us.module.js',
-                            'app/modules/home/contact-us/contact-us.controller.js'
-                        ]
-                    });
+                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'app/modules/home/contact-us/contact-us.module.js',
+                        'app/modules/home/contact-us/contact-us.controller.js'
+                    ]
+                    );
                 }]
             }
         }
@@ -81,16 +77,13 @@
             },
             resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
+                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
 
-                    return $ocLazyLoad.load(
-                        {
-                            name: 'app.home.aboutus',
-                            files: [
-                                'app/modules/home/about-us/about-us.module.js',
-                                'app/modules/home/about-us/about-us.controller.js'
-                            ]
-                        }
+                    return $ocLazyLoad.load([
+                        'app/modules/home/about-us/about-us.module.js',
+                        'app/modules/home/about-us/about-us.controller.js'
+                    ]
+
                     );
                 }]
             }
