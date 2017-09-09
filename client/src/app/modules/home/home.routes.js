@@ -11,7 +11,7 @@
         var dahsboard = {
             name: "home.dashboard",
             url: "/dashboard",
-            authenticate: false,
+            authenticate: true,
             active: "home.dashboard",
             views: {
                 'menu': {
@@ -37,7 +37,7 @@
         var contactus = {
             name: "home.contactus",
             url: "/contactus",
-            authenticate: false,
+            authenticate: true,
             active: "home.contactus",
             views: {
                 'menu': {
@@ -64,7 +64,7 @@
         var aboutus = {
             name: "home.aboutus",
             url: "/aboutus",
-            authenticate: false,
+            authenticate: true,
             active: "home.aboutus",
             views: {
                 'menu': {

@@ -68,3 +68,12 @@ html,body{
   width:150px;
   border-radius: 50%;
 }
+.active{
+  color:rgb(63,81,181)
+}
+md-icon {
+  fill:black;
+}
+.active md-icon {
+  fill:rgb(63,81,181);
+}
