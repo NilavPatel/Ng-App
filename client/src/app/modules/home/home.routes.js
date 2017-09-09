@@ -15,20 +15,23 @@
             active: "home.dashboard",
             views: {
                 'menu': {
+                    controller: 'MenuController',
                     templateUrl: 'app/shared/menu/menu.html'
                 },
                 'container': {
+                    controller: 'DashboardController',
                     templateUrl: 'app/modules/home/dashboard/dashboard.html'
                 }
             },
-            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        'app/modules/home/dashboard/dashboard.module.js',
-                        'app/modules/home/dashboard/dashboard.controller.js'
-                    ]
-                    );
+                dahsboard: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        serie: true,
+                        files: [
+                            'app/modules/home/dashboard/dashboard.module.js',
+                            'app/modules/home/dashboard/dashboard.controller.js'
+                        ]
+                    });
                 }]
             }
         }
@@ -41,21 +44,23 @@
             active: "home.contactus",
             views: {
                 'menu': {
+                    controller: 'MenuController',
                     templateUrl: 'app/shared/menu/menu.html'
                 },
                 'container': {
+                    controller: 'ContactUsController',
                     templateUrl: 'app/modules/home/contact-us/contact-us.html'
-
                 }
             },
-            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        'app/modules/home/contact-us/contact-us.module.js',
-                        'app/modules/home/contact-us/contact-us.controller.js'
-                    ]
-                    );
+                contactus: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        serie: true,
+                        files: [
+                            'app/modules/home/contact-us/contact-us.module.js',
+                            'app/modules/home/contact-us/contact-us.controller.js'
+                        ]
+                    });
                 }]
             }
         }
@@ -68,23 +73,24 @@
             active: "home.aboutus",
             views: {
                 'menu': {
+                    controller: 'MenuController',
                     templateUrl: 'app/shared/menu/menu.html'
                 },
                 'container': {
+                    controller: 'AboutUsController',
                     templateUrl: 'app/modules/home/about-us/about-us.html'
-
                 }
             },
-            resolvePolicy: { deps: { when: "EAGER", async: "WAIT" } },
             resolve: {
-                parent: ['$ocLazyLoad', function ($ocLazyLoad) {
+                aboutus: ['$ocLazyLoad', function ($ocLazyLoad) {
 
-                    return $ocLazyLoad.load([
-                        'app/modules/home/about-us/about-us.module.js',
-                        'app/modules/home/about-us/about-us.controller.js'
-                    ]
-
-                    );
+                    return $ocLazyLoad.load({
+                        serie: true,
+                        files: [
+                            'app/modules/home/about-us/about-us.module.js',
+                            'app/modules/home/about-us/about-us.controller.js'
+                        ]
+                    });
                 }]
             }
         }

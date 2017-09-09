@@ -31,10 +31,13 @@
             },
             resolve: {
                 parent: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        'app/shared/menu/menu.module.js',
-                        'app/shared/menu/menu.controller.js'
-                    ]);
+                    return $ocLazyLoad.load({
+                        serie: true,
+                        files: [
+                            'app/shared/menu/menu.module.js',
+                            'app/shared/menu/menu.controller.js'
+                        ]
+                    });
                 }]
             }
         }
