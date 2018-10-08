@@ -58,7 +58,7 @@
             .state(home)
             .state(error404);
 
-        $urlRouterProvider.otherwise("404");
+        $urlRouterProvider.otherwise("login");
 
         $urlRouterProvider.when('', '/login');
     }

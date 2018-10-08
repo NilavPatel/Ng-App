@@ -1,4 +1,7 @@
-AngularJS Application sample with,
+#AngularJS Application sample with,
+```````
 OcLazyLoading,
 File structure,
-Coding standards.
+Coding standards,
+Angular Material
+```````
