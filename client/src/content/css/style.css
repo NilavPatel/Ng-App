@@ -77,3 +77,14 @@ md-icon {
 .active md-icon {
   fill:rgb(63,81,181);
 }
+.menu-layout .menu-item{
+  cursor: pointer;
+}
+
+.menu-layout  .menu-item:hover{
+  background-color:lightgray;
+}
+
+.login-form {
+  position: relative;
+}

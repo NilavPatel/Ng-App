@@ -5,14 +5,15 @@
         .module("app.menu")
         .controller("MenuController", MenuController);
 
-    MenuController.$inject = ["$state", "$mdSidenav"];
+    MenuController.$inject = ["$state", "$mdSidenav", "userContext"];
 
-    function MenuController($state, $mdSidenav) {
+    function MenuController($state, $mdSidenav, userContext) {
 
         var self = this;
         // variables
         self.module = "Menu";
         self.current = $state.current.active;
+        self.user = userContext.getUser();
         self.menus = [{
             id: 'dashbaord',
             title: 'Home',

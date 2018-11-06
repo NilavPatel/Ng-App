@@ -1,21 +1,23 @@
-<div ng-app="app.login" ng-controller="LoginController as login">
-    <div class="module-title">
+<div ng-app="app.login" ng-controller="LoginController as login" class="login-form">
+    <div class="module-title" layout-padding>
         {{login.module}}
     </div>
     <form name="loginForm" class="my-form" ng-submit="login.submitLogin()">
-        <div>
+        <div layout-padding>
             <input type="text" name="username" placeholder="User name" ng-model="login.username" ng-required="true">
+            <div ng-messages="loginForm.username.$touched && loginForm.username.$error" class="error-message" role="alert">
+                <div ng-message="required">Please enter a user name</div>
+            </div>
         </div>
-        <div ng-messages="loginForm.username.$touched && loginForm.username.$error" class="error-message" role="alert">
-            <div ng-message="required">You did not enter a field</div>
-        </div>
-        <div>
+
+        <div layout-padding>
             <input type="password" name="password" placeholder="Password" ng-model="login.password" ng-required="true">
+            <div ng-messages="loginForm.password.$touched && loginForm.password.$error" class="error-message" role="alert">
+                <div ng-message="required">Please enter a password</div>
+            </div>
         </div>
-        <div ng-messages="loginForm.password.$touched && loginForm.password.$error" class="error-message" role="alert">
-            <div ng-message="required">You did not enter a field</div>
-        </div>
-        <div>
+
+        <div layout-padding>
             <input type="submit" title="Login">
         </div>
     </form>
