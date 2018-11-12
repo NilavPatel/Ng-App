@@ -16,11 +16,11 @@
             views: {
                 'menu': {
                     controller: 'MenuController',
-                    templateUrl: 'app/shared/menu/menu.html'
+                    templateUrl: 'shared/menu/menu.html'
                 },
                 'container': {
                     controller: 'DashboardController',
-                    templateUrl: 'app/modules/home/dashboard/dashboard.html'
+                    templateUrl: 'modules/home/dashboard/dashboard.html'
                 }
             },
             resolve: {
@@ -28,8 +28,8 @@
                     return $ocLazyLoad.load({
                         serie: true,
                         files: [
-                            'app/modules/home/dashboard/dashboard.module.js',
-                            'app/modules/home/dashboard/dashboard.controller.js'
+                            'modules/home/dashboard/dashboard.module.js',
+                            'modules/home/dashboard/dashboard.controller.js'
                         ]
                     });
                 }]
@@ -45,11 +45,11 @@
             views: {
                 'menu': {
                     controller: 'MenuController',
-                    templateUrl: 'app/shared/menu/menu.html'
+                    templateUrl: 'shared/menu/menu.html'
                 },
                 'container': {
                     controller: 'ContactUsController',
-                    templateUrl: 'app/modules/home/contact-us/contact-us.html'
+                    templateUrl: 'modules/home/contact-us/contact-us.html'
                 }
             },
             resolve: {
@@ -57,8 +57,8 @@
                     return $ocLazyLoad.load({
                         serie: true,
                         files: [
-                            'app/modules/home/contact-us/contact-us.module.js',
-                            'app/modules/home/contact-us/contact-us.controller.js'
+                            'modules/home/contact-us/contact-us.module.js',
+                            'modules/home/contact-us/contact-us.controller.js'
                         ]
                     });
                 }]
@@ -74,11 +74,11 @@
             views: {
                 'menu': {
                     controller: 'MenuController',
-                    templateUrl: 'app/shared/menu/menu.html'
+                    templateUrl: 'shared/menu/menu.html'
                 },
                 'container': {
                     controller: 'AboutUsController',
-                    templateUrl: 'app/modules/home/about-us/about-us.html'
+                    templateUrl: 'modules/home/about-us/about-us.html'
                 }
             },
             resolve: {
@@ -87,8 +87,8 @@
                     return $ocLazyLoad.load({
                         serie: true,
                         files: [
-                            'app/modules/home/about-us/about-us.module.js',
-                            'app/modules/home/about-us/about-us.controller.js'
+                            'modules/home/about-us/about-us.module.js',
+                            'modules/home/about-us/about-us.controller.js'
                         ]
                     });
                 }]

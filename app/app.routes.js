@@ -14,7 +14,7 @@
             views: {
                 "main": {
                     controller: 'LoginController',
-                    templateUrl: 'app/modules/login/login.html'
+                    templateUrl: 'modules/login/login.html'
                 }
             }
         }
@@ -26,7 +26,7 @@
             views: {
                 "main": {
                     controller: 'HomeController',
-                    templateUrl: 'app/modules/home/home.html'
+                    templateUrl: 'modules/home/home.html'
                 }
             },
             resolve: {
@@ -34,8 +34,8 @@
                     return $ocLazyLoad.load({
                         serie: true,
                         files: [
-                            'app/shared/menu/menu.module.js',
-                            'app/shared/menu/menu.controller.js'
+                            'shared/menu/menu.module.js',
+                            'shared/menu/menu.controller.js'
                         ]
                     });
                 }]
@@ -48,7 +48,7 @@
             authenticate: false,
             views: {
                 "main": {
-                    templateUrl: 'app/shared/error/404.html'
+                    templateUrl: 'shared/error/404.html'
                 }
             },
         }
