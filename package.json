@@ -24,23 +24,10 @@
   "devDependencies": {
     "angular-mocks": "^1.7.5",
     "cpx": "^1.5.0",
-    "http-server": "^0.11.1",
-    "jasmine-core": "^3.3.0",
-    "karma": "^3.1.1",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^1.1.2",
-    "protractor": "^5.4.1"
+    "http-server": "^0.11.1"
   },
-  "scripts": {
-    "postinstall": "npm run copy-libs",
-    "update-deps": "npm update",
-    "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,oclazyload}/**/*\" app/lib -C",
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app",
-    "preupdate-webdriver": "npm install",
-    "//": "Do not install the Firefox driver to work around https://github.com/angular/webdriver-manager/issues/303.",
-    "update-webdriver": "webdriver-manager update --gecko false"
+  "scripts": {   
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,oclazyload}/**/*\" app/lib -C",    
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"    
   }
 }

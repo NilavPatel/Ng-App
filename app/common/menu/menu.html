@@ -1,0 +1,25 @@
+<div ng-app="app.menu" ng-controller="MenuController as menu" class="menu-layout">
+    <section layout="column">
+        <md-toolbar>
+            <div layout="column" layout-align="center center" layout-padding>
+                <img src="style/images/nilav-patel.jpg" class="user-image" />
+                <div layout="row">
+                    Welcome {{menu.user.name}}
+                </div>
+                <div layout="row" ng-click="menu.logout()" class="logout-button">
+                    Logout
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <div layout-padding>
+                <div ng-repeat="item in menu.menus" layout="row" layout-align="start center" class="menu-item" ui-sref="{{item.view}}" ui-sref-active="active">
+                    <a>
+                        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+                        {{item.title}}
+                    </a>
+                </div>
+            </div>
+        </md-content>
+    </section>
+</div>

@@ -12,7 +12,7 @@ html,body{
      color: brown;
      font-size: 30px;
  }
-    .progressCirculardemoBasicUsage body {
+.progressCirculardemoBasicUsage body {
   padding: 20px; }
 
 .progressCirculardemoBasicUsage h4 {
@@ -69,7 +69,8 @@ html,body{
   border-radius: 50%;
 }
 .active{
-  color:rgb(63,81,181)
+  color:rgb(63,81,181);
+  background-color:lightgray;
 }
 md-icon {
   fill:black;
@@ -87,4 +88,6 @@ md-icon {
 
 .login-form {
   position: relative;
+}
+.logout-button{cursor: pointer;
 }

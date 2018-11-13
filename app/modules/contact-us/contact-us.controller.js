@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module("app.home.contactus")
+        .module("app.contactus")
         .controller("ContactUsController", ContactUsController);
 
     ContactUsController.$inject = [];

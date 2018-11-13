@@ -8,15 +8,25 @@
     userContext.$inject = [];
 
     function userContext() {
-        var user = null;
+
+        function setUserContext(value) {
+            localStorage.setItem("user", JSON.stringify(value));
+        }
+
+        function getUserContext() {
+            var user = localStorage.getItem("user");
+            return JSON.parse(user);
+        }
+
         return {
             setUser: function (value) {
-                user = value;
+                setUserContext(value);
             },
             getUser: function () {
-                return user;
+                return getUserContext();
             },
             isAuthenticated: function () {
+                var user = getUserContext();
                 if (user !== null && user.name.length > 0) {
                     return true;
                 }

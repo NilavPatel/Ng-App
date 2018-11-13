@@ -2,5 +2,6 @@
     "use strict";
 
     angular
-        .module("app.home.aboutus", []);
+        .module("app.contactus", []);
+
 })();

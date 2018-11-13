@@ -10,6 +10,6 @@
     function AppController(__env) {
         var self = this;
         self.title = __env.applicationName + " " + __env.version;        
-    }
+    }    
 
 })();

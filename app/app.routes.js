@@ -34,8 +34,8 @@
                     return $ocLazyLoad.load({
                         serie: true,
                         files: [
-                            'shared/menu/menu.module.js',
-                            'shared/menu/menu.controller.js'
+                            'common/menu/menu.module.js',
+                            'common/menu/menu.controller.js'
                         ]
                     });
                 }]
@@ -48,7 +48,7 @@
             authenticate: false,
             views: {
                 "main": {
-                    templateUrl: 'shared/error/404.html'
+                    templateUrl: 'common/error/404.html'
                 }
             },
         }

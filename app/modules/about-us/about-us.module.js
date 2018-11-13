@@ -2,5 +2,5 @@
     "use strict";
 
     angular
-        .module("app.home.dashboard",[]);
+        .module("app.aboutus", []);
 })();
