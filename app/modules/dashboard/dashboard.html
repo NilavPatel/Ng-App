@@ -1,5 +1,24 @@
-<div ng-app="app.dashboard" ng-controller="DashboardController as dashboard">
-    <div>
-        Welcome {{dashboard.user.name}} ...!
+<div ng-app="app.dashboard" ng-controller="DashboardController as dashboard" class="dashboard-overviews">
+    <div layout="row" layout-margin layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+
+        <div class="red" md-whiteframe="4" flex-sm="40" flex-gt-sm="30" flex-gt-md="20" layout layout-align="center center">
+            <b> <span>Active</span> </b>
+            <span>78%</span>
+        </div>
+
+        <div class="cyan" md-whiteframe="4" flex-sm="40" flex-gt-sm="30" flex-gt-md="20" layout layout-align="center center">
+            <b><span>Users</span></b>
+            <span>62%</span>
+        </div>
+
+        <div class="amber" md-whiteframe="4" flex-sm="40" flex-gt-sm="30" flex-gt-md="20" layout layout-align="center center">
+            <b><span>Mobiles</span></b>
+            <span>89%</span>
+        </div>
+
+        <div class="light-green" md-whiteframe="4" flex-sm="40" flex-gt-sm="30" flex-gt-md="20" layout layout-align="center center">
+            <b> <span>Social</span></b>
+            <span>95%</span>
+        </div>
     </div>
 </div>

@@ -91,3 +91,10 @@ md-icon {
 }
 .logout-button{cursor: pointer;
 }
+.red{background-color:#F44336}
+.cyan{background-color:#00BCD4}
+.amber{background-color:#FFC107}
+.light-green{background-color:#8BC34A}
+.dashboard-overviews{
+  height:150px;
+}
