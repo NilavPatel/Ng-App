@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .factory('httpInterceptor', function ($q, $rootScope, $log) {
+        .factory('httpInterceptor', ['$q', '$rootScope', '$log', function ($q, $rootScope, $log) {
 
             var numLoadings = 0;
 
@@ -43,8 +43,8 @@
                     return $q.reject(response);
                 }
             };
-        })
-        .config(function ($httpProvider) {
+        }])
+        .config(['$httpProvider', function ($httpProvider) {
             $httpProvider.interceptors.push('httpInterceptor');
-        });
+        }]);
 })();

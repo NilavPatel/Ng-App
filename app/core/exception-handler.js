@@ -5,17 +5,13 @@
         .module('app')
         .config(exceptionConfig);
 
-
     exceptionConfig.$inject = ['$provide'];
-
 
     function exceptionConfig($provide) {
         $provide.decorator('$exceptionHandler', extendExceptionHandler);
     }
 
-
     extendExceptionHandler.$inject = ['$delegate', '$log'];
-
 
     function extendExceptionHandler($delegate, $log) {
         return function (exception, cause) {

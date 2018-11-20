@@ -5,6 +5,8 @@
         .module("app.home")
         .config(stateConfig);
 
+    stateConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+
     function stateConfig($stateProvider, $urlRouterProvider) {
 
         // dashboard state

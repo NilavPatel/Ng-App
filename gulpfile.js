@@ -22,7 +22,7 @@ gulp.task('minify-css', function () {
 
 gulp.task('minify-js', function () {
   gulp.src(['./app/**/*.js', '!./app/lib/**'])
-    .pipe(uglify({mangle:false}))
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -30,7 +30,7 @@ gulp.task('copy-node-modules', function () {
   gulp.src(["./app/**//angular/angular.min.js",
     "./app/**//angular-animate/angular-animate.min.js",
     "./app/**//angular-aria/angular-aria.min.js",
-    "./app/**//@iurouter/angularjs/angular-ui-router.min.js",
+    "./app/**//@uirouter/angularjs/release/angular-ui-router.min.js",
     "./app/**//angular-messages/angular-messages.min.js",
     "./app/**//oclazyload/dist/ocLazyLoad.min.js",
     "./app/**//angular-material/angular-material.min.js",
