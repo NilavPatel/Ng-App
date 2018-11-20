@@ -30,7 +30,7 @@ gulp.task('copy-node-modules', function () {
   gulp.src(["./app/**//angular/angular.min.js",
     "./app/**//angular-animate/angular-animate.min.js",
     "./app/**//angular-aria/angular-aria.min.js",
-    "./app/**//angular-ui-router/release/angular-ui-router.min.js",
+    "./app/**//@iurouter/angularjs/angular-ui-router.min.js",
     "./app/**//angular-messages/angular-messages.min.js",
     "./app/**//oclazyload/dist/ocLazyLoad.min.js",
     "./app/**//angular-material/angular-material.min.js",
