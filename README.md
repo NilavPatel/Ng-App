@@ -25,4 +25,4 @@ run below commands in NPM console
         which contains producton build.
         (with minification and uglification of css and js files)
 ``````
-![image dashboard](https://github.com/NilavPatel/ng-app/blob/master/style/images/dashboard.png)
+![image dashboard](https://github.com/NilavPatel/ng-app/blob/master/app/style/images/dashboard.png)
