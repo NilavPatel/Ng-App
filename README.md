@@ -12,9 +12,8 @@
 run below commands in NPM console
 
 1.  npm install
-2.  npm run copy-lib
-3.  npm start
-        or npm run start
+2.  npm run copy-libs
+3.  npm run start
 ``````
 
 ## Production version:
